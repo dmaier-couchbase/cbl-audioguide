@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="true"
+    android:orientation="horizontal"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:background="#dbdbdb">
+
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/entries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="1">
+        </GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Title"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                android:scrollbars="horizontal"
+                android:fadeScrollbars="false"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="#55000000"
+                android:padding="20dp">
+
+                <Button
+                    android:id="@+id/buttonplay"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/play"
+                    android:onClick="onPlayClicked"
+                    android:clickable="true" />
+
+                <Button
+                    android:id="@+id/buttonpause"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/pause"
+                    android:background="@android:color/transparent"
+                    android:onClick="onPauseClicked"
+                    />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <SeekBar
+                android:id="@+id/playprogress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="100"
+                android:clickable="false"
+                android:indeterminate="false" />
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:background="#55000000">
+
+            <Button
+                android:id="@+id/seekback"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/seekback"
+                android:onClick="onSeekBackClicked"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/seekfwd"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/seekfwd"
+                android:onClick="onSeekFwdClicked"
+                android:background="@android:color/transparent"/>
+
+                <Button
+                    android:id="@+id/volumedown"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/voldown"
+                    android:onClick="onVolumeDownClicked"
+                    android:background="@android:color/transparent"/>
+
+                <Button
+                    android:id="@+id/volumeup"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/volup"
+                    android:onClick="onVolumeUpClicked"
+                    android:background="@android:color/transparent" />
+
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:layout_margin="10dp"
+            android:text="Desc"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="128"
+            android:scrollbars="horizontal"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

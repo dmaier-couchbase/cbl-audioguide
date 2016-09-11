@@ -35,6 +35,7 @@ AudioGuide/captures/
 # Intellij
 *.iml
 AudioGuide/.idea/workspace.xml
+AudioGuide/.idea/
 
 # Keystore files
 *.jks
